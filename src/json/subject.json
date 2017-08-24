@@ -1,0 +1,94 @@
+{
+  "Subjects": [
+    {
+      "ID": 1,
+      "SubjectName": "English",
+      "Category": "Education",
+      "Count" : 435435
+    },
+    {
+      "ID": 2,
+      "SubjectName": "Maths",
+      "Category": "Education",
+      "Count" : 14523
+    },
+    {
+      "ID": 3,
+      "SubjectName": "Physics",
+      "Category": "Education",
+      "Count" : 343
+    },
+    {
+      "ID": 4,
+      "SubjectName": "Chemistry",
+      "Category": "Education",
+      "Count" : 236236
+    },
+    {
+      "ID": 5,
+      "SubjectName": "Biology",
+      "Category": "Education",
+      "Count" : 56756
+    },
+    {
+      "ID": 6,
+      "SubjectName": "Geography",
+      "Category": "Education",
+      "Count" : 4345
+    },
+    {
+      "ID": 7,
+      "SubjectName": "History",
+      "Category": "Education",
+      "Count" : 234
+    },
+    {
+      "ID": 8,
+      "SubjectName": "Music",
+      "Category": "Arts",
+      "Count" : 76568
+    },
+    {
+      "ID": 9,
+      "SubjectName": "Illustration",
+      "Category": "Arts",
+      "Count" : 7227
+    },
+    {
+      "ID": 10,
+      "SubjectName": "Dance",
+      "Category": "Arts",
+      "Count" : 463
+    },
+    {
+      "ID": 11,
+      "SubjectName": "Adobe Photoshop",
+      "Category": "Software",
+      "Count" : 789
+    },
+    {
+      "ID": 12,
+      "SubjectName": "Adobe Illustrator",
+      "Category": "Software",
+      "Count" : 5
+    },
+    {
+      "ID": 13,
+      "SubjectName": "Sketch",
+      "Category": "Software",
+      "Count" : 568756
+    },
+    {
+      "ID": 14,
+      "SubjectName": "Korean",
+      "Category": "Language",
+      "Count" : 7573
+    },
+    {
+      "ID": 15,
+      "SubjectName": "Japanese",
+      "Category": "Language",
+      "Count" : 679
+    }
+  ]
+}
