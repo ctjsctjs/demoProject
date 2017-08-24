@@ -1,3 +1,5 @@
+angular.module('app', ['ngRoute']);
+
 (function(){
-  myModule = angular.module('myAngularApp',[]);
+  app = angular.module('demoApp',[]);
 }());

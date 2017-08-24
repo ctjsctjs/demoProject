@@ -18,7 +18,6 @@
   myModule.controller('subjectsController', subjectsController);
 }());*/
 
-var app = angular.module('demoApp', []);
 app.controller('tableController', ['$scope', '$http', function($scope, $http){
   $scope.message = 'Subject page';
   $scope.sortField = 'ID';
