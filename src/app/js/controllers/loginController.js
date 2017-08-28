@@ -1,5 +1,5 @@
-app.controller('tableController', ['$scope', '$http', function($scope, $http){
-  $scope.message = 'Subject page';
+app.controller('loginController', ['$scope', '$http', function($scope, $http){
+  $scope.message = 'Login page';
   $scope.sortField = 'ID';
   $scope.reverse = false;
   $scope.subjects = [];
