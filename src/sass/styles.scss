@@ -8,7 +8,9 @@ Exported Selectors - the manifested CSS classes/selectors, if they are to be exp
 */
 
 //Variables
-@import "partials/colors";
+@import "modules/colors";
+@import "modules/variables";
+@import "modules/mixins";
 
 // Partials
 @import "partials/base";

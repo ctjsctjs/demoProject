@@ -1,0 +1,13 @@
+@mixin bgPos($values...) {
+  -webkit-transition:background-position $values;  
+  -moz-transition:background-position $values;  
+  -o-transition:background-position $values;  
+  transition:background-position $values;
+}
+
+@mixin shadowFade($values...) {
+  -webkit-transition:box-shadow $values;  
+  -moz-transition:box-shadow $values;  
+  -o-transition:box-shadow $values;  
+  transition:box-shadow $values;
+}
