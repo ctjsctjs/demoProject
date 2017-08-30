@@ -7,19 +7,20 @@ Themes - thematic CSS for non-layout component styling, such as background, colo
 Exported Selectors - the manifested CSS classes/selectors, if they are to be expose
 */
 
-// Layout
-@import "layout/grids";
-@import "layout/navigation";
-
-// Modules and Variables
-@import "partials/base";
+//Variables
+@import "partials/colors";
 
 // Partials
+@import "partials/base";
 @import "partials/reset";
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/figures";
 
+// Layout
+@import "layout/grids";
+@import "layout/navigation";
+@import "layout/main";
 
 // Third-party
 @import "vendor/colorpicker";
@@ -27,10 +28,3 @@ Exported Selectors - the manifested CSS classes/selectors, if they are to be exp
 @import "compass";
 @import "compass/reset";
 
-
-.nav{
-  width: 100%;
-  position: fixed;
-  background-color:darkslategrey;
-  height: 65px;
-}
