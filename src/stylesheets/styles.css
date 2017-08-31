@@ -20,6 +20,72 @@ li {
   list-style: none;
 }
 
+/* line 13, ../sass/partials/_reset.scss */
+input, button, submit {
+  border: none;
+  background-color: transparent;
+}
+
+/* line 1, ../sass/partials/_typography.scss */
+body {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* line 8, ../sass/partials/_typography.scss */
+.item-head {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 15, ../sass/partials/_typography.scss */
+.item-sub, .main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* line 1, ../sass/partials/_buttons.scss */
+.generic-btn {
+  cursor: pointer;
+  border: 2px solid #D2D2D2;
+  min-height: 40px;
+  height: auto;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  color: #D2D2D2;
+  text-align: center;
+  -webkit-transition: border 0.1s ease-in-out 0s;
+  -moz-transition: border 0.1s ease-in-out 0s;
+  -o-transition: border 0.1s ease-in-out 0s;
+  transition: border 0.1s ease-in-out 0s;
+  -webkit-transition: color 0.1s ease-in-out 0s;
+  -moz-transition: color 0.1s ease-in-out 0s;
+  -o-transition: color 0.1s ease-in-out 0s;
+  transition: color 0.1s ease-in-out 0s;
+  padding: 12px 12px;
+}
+/* line 17, ../sass/partials/_buttons.scss */
+.generic-btn:hover {
+  color: #FAFAFA;
+  border: 2px solid #FAFAFA;
+  -webkit-transition: border 0.1s ease-in-out 0s;
+  -moz-transition: border 0.1s ease-in-out 0s;
+  -o-transition: border 0.1s ease-in-out 0s;
+  transition: border 0.1s ease-in-out 0s;
+  -webkit-transition: color 0.1s ease-in-out 0s;
+  -moz-transition: color 0.1s ease-in-out 0s;
+  -o-transition: color 0.1s ease-in-out 0s;
+  transition: color 0.1s ease-in-out 0s;
+}
+
 /* line 1, ../sass/layout/_grids.scss */
 .wrapper {
   position: relative;
@@ -42,30 +108,30 @@ li {
   height: 60px;
   width: 100%;
 }
-/* line 7, ../sass/layout/_navigation.scss */
+/* line 6, ../sass/layout/_navigation.scss */
 .nav div {
   max-width: 1366px;
   width: 100%;
   margin: 0 auto;
 }
-/* line 13, ../sass/layout/_navigation.scss */
+/* line 11, ../sass/layout/_navigation.scss */
 .nav div .nav-logo {
   float: left;
   height: 100%;
   width: auto;
   display: table;
 }
-/* line 20, ../sass/layout/_navigation.scss */
+/* line 17, ../sass/layout/_navigation.scss */
 .nav div .nav-logo a {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 25, ../sass/layout/_navigation.scss */
+/* line 21, ../sass/layout/_navigation.scss */
 .nav div .nav-logo a img {
   height: 40px;
   width: 70px;
 }
-/* line 34, ../sass/layout/_navigation.scss */
+/* line 29, ../sass/layout/_navigation.scss */
 .nav div .nav-menu-btn {
   float: right;
   height: 60px;
@@ -73,7 +139,7 @@ li {
   padding: 10px 0;
   cursor: pointer;
 }
-/* line 42, ../sass/layout/_navigation.scss */
+/* line 36, ../sass/layout/_navigation.scss */
 .nav div .nav-menu-btn div {
   width: 35px;
   height: 5px;
@@ -82,22 +148,22 @@ li {
   transition: 0.4s;
 }
 
-/* line 54, ../sass/layout/_navigation.scss */
+/* line 47, ../sass/layout/_navigation.scss */
 .nav-menu-btn.change {
   /* Rotate first bar */
   /* Fade out the second bar */
   /* Rotate last bar */
 }
-/* line 57, ../sass/layout/_navigation.scss */
+/* line 50, ../sass/layout/_navigation.scss */
 .nav-menu-btn.change #top-bar {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
-/* line 63, ../sass/layout/_navigation.scss */
+/* line 56, ../sass/layout/_navigation.scss */
 .nav-menu-btn.change #mid-bar {
   opacity: 0;
 }
-/* line 68, ../sass/layout/_navigation.scss */
+/* line 61, ../sass/layout/_navigation.scss */
 .nav-menu-btn.change #bot-bar {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
@@ -119,103 +185,178 @@ li {
   /*Item properties*/
   /*Responsive Grid for items*/
   /*Desktop devices*/
+  /* Desktops and laptops ----------- */
   /*Tablet devices*/
   /*Phone devices*/
 }
 /* line 15, ../sass/layout/_main.scss */
 .main-wrapper .main-content .main-item {
+  overflow: hidden;
   position: relative;
   background-color: #FAFAFA;
   width: calc(25% - 9px);
   margin: 12px 6px 0;
-  /* Portrait and Landscape */
-  /* Individual Item*/
 }
-@media (max-width: 768px) {
-  /* line 15, ../sass/layout/_main.scss */
-  .main-wrapper .main-content .main-item {
-    width: calc(50% - 6px);
-  }
-}
-@media (max-width: 480px) {
-  /* line 15, ../sass/layout/_main.scss */
-  .main-wrapper .main-content .main-item {
-    width: 100%;
-  }
-}
-/* line 31, ../sass/layout/_main.scss */
+/* line 22, ../sass/layout/_main.scss */
 .main-wrapper .main-content .main-item .main-item-wrapper {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   position: absolute;
+  -webkit-transition: left 0.1s ease-in-out;
+  -moz-transition: left 0.1s ease-in-out;
+  -o-transition: left 0.1s ease-in-out;
+  transition: left 0.1s ease-in-out;
 }
-/* line 41, ../sass/layout/_main.scss */
-.main-wrapper .main-content .main-item#workato .main-item-wrapper {
+/* line 33, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper:hover, .main-wrapper .main-content .main-item .main-item-wrapper :active {
+  left: -50%;
+  -webkit-transition: left 0.1s ease-in-out;
+  -moz-transition: left 0.1s ease-in-out;
+  -o-transition: left 0.1s ease-in-out;
+  transition: left 0.1s ease-in-out;
+}
+/* line 38, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text {
+  width: 50%;
+  height: 100%;
+  margin-left: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 44, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content {
+  position: relative;
+  padding-top: 48px;
+  height: 100%;
+}
+/* line 50, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content .item-head {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  margin: 0 24px 12px 24px;
+  color: #FAFAFA;
+}
+/* line 60, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li {
+  overflow: hidden;
+  position: relative;
+  padding: 6px 24px;
+  width: 100%;
+  color: #FAFAFA;
   cursor: pointer;
-  background-image: url(/images/item-workato.svg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -webkit-transition: background-position 0.2s ease-in-out;
-  -moz-transition: background-position 0.2s ease-in-out;
-  -o-transition: background-position 0.2s ease-in-out;
-  transition: background-position 0.2s ease-in-out;
+  color: #bebebe;
 }
-/* line 49, ../sass/layout/_main.scss */
-.main-wrapper .main-content .main-item#workato:hover .main-item-wrapper {
-  background-position: 0 -36px;
-  -webkit-transition: background-position 0.2s ease-in-out;
-  -moz-transition: background-position 0.2s ease-in-out;
-  -o-transition: background-position 0.2s ease-in-out;
-  transition: background-position 0.2s ease-in-out;
+/* line 70, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li .tag-bg {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  right: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: right 0.2s ease-in-out;
+  -moz-transition: right 0.2s ease-in-out;
+  -o-transition: right 0.2s ease-in-out;
+  transition: right 0.2s ease-in-out;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
-/* line 58, ../sass/layout/_main.scss */
+/* line 80, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li:hover, .main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li :active {
+  color: #FAFAFA;
+}
+/* line 83, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li:hover .tag-bg, .main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li :active .tag-bg {
+  right: 0;
+  -webkit-transition: right 0.2s ease-in-out;
+  -moz-transition: right 0.2s ease-in-out;
+  -o-transition: right 0.2s ease-in-out;
+  transition: right 0.2s ease-in-out;
+}
+/* line 91, ../sass/layout/_main.scss */
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content a .main-btn {
+  max-width: 100%;
+  width: calc(100% - 48px);
+  margin: 0 24px 0 24px;
+  position: absolute;
+  bottom: 24px;
+}
+/* line 104, ../sass/layout/_main.scss */
 .main-wrapper .main-content .main-item:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-@media screen and (min-width: 768px) {
-  /* line 70, ../sass/layout/_main.scss */
+@media screen and (min-width: 1366px) {
+  /* line 115, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item:nth-child(-n+4) {
     margin-top: 0;
   }
-  /* line 74, ../sass/layout/_main.scss */
+  /* line 116, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item:nth-child(4n+1) {
     margin-left: 0;
   }
-  /* line 78, ../sass/layout/_main.scss */
+  /* line 117, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item:nth-child(4n+4) {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 88, ../sass/layout/_main.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  /* line 124, ../sass/layout/_main.scss */
+  .main-wrapper .main-content .main-item:nth-child(-n+3) {
+    margin-top: 0;
+  }
+  /* line 125, ../sass/layout/_main.scss */
+  .main-wrapper .main-content .main-item:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  /* line 126, ../sass/layout/_main.scss */
+  .main-wrapper .main-content .main-item:nth-child(3n+3) {
+    margin-right: 0;
+  }
+  /* line 127, ../sass/layout/_main.scss */
+  .main-wrapper .main-content .main-item {
+    width: calc(33.333% - 8px);
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  /* line 134, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item:nth-child(-n+2) {
     margin-top: 0;
   }
-  /* line 92, ../sass/layout/_main.scss */
+  /* line 135, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item:nth-child(2n+1) {
     margin-left: 0;
   }
-  /* line 96, ../sass/layout/_main.scss */
+  /* line 136, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item:nth-child(2n+2) {
     margin-right: 0;
   }
+  /* line 137, ../sass/layout/_main.scss */
+  .main-wrapper .main-content .main-item {
+    width: calc(50% - 6px);
+  }
 }
-@media screen and (max-width: 480px) {
-  /* line 105, ../sass/layout/_main.scss */
+@media screen and (max-width: 640px) {
+  /* line 143, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item:first-child {
     margin-top: 0;
   }
-  /* line 109, ../sass/layout/_main.scss */
+  /* line 144, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item {
     margin-left: 0;
   }
-  /* line 113, ../sass/layout/_main.scss */
+  /* line 145, ../sass/layout/_main.scss */
   .main-wrapper .main-content .main-item {
     margin-right: 0;
+  }
+  /* line 146, ../sass/layout/_main.scss */
+  .main-wrapper .main-content .main-item {
+    width: 100%;
   }
 }
 

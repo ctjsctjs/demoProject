@@ -4,7 +4,7 @@
   /*Content Grid layout*/
   .main-content{
 
-    max-width: 1366px;
+    max-width: $desktopScreen;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -13,43 +13,89 @@
 
     /*Item properties*/
     .main-item{
-
+      overflow: hidden;
       position: relative;
       background-color: $greyUltraLight; 
       width: calc(25% - 9px);
       margin: 12px 6px 0;
 
-      /* Portrait and Landscape */
-      @media (max-width: 768px) {
-        width: calc(50% - 6px);  
-      }
-
-      @media (max-width: 480px) {
-        width: 100%;  
-      }
-
       .main-item-wrapper{
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: 0;
         width:100%;
         height:100%;
         top: 0;
         left: 0;
         position:absolute;
-      }
+        @include leftPos(0.1s ease-in-out);
 
-      /* Individual Item*/
-      &#workato{
-        .main-item-wrapper{
-          cursor:pointer;
-          background-image:url(/images/item-workato.svg);
-          background-repeat: no-repeat;
-          background-size: 100% 100%;         
-          @include bgPos(0.2s ease-in-out); 
+        &:hover,:active{
+          left:-  50%;
+          @include leftPos(0.1s ease-in-out);
         }
-        &:hover{
-          .main-item-wrapper{
-            background-position: 0 -36px;  
-            @include bgPos(0.2s ease-in-out); 
 
+        .main-item-text{
+          width:50%;
+          height:100%;
+          margin-left: 100%;
+          background-color: rgba(255,255,255,0.1); 
+          
+          .main-item-text-content{
+            
+            position: relative;
+            padding-top: 48px;
+            height: 100%;
+            
+            .item-head{
+              display:inline-block;
+              width: auto;
+              margin: 0 auto;
+              margin: 0 24px 12px 24px;
+              @include color($greyUltraLight);             
+            }
+
+            ul{
+
+              li{
+                overflow: hidden;
+                position: relative;
+                padding: 6px 24px;
+                width: 100%;
+                @include color($greyUltraLight);
+                cursor:pointer;
+                @include color($greyRegular);
+                @extend .item-sub;
+
+                .tag-bg{
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  right: 100%;
+                  position: absolute;
+                  background-color: rgba(255,255,255,0.1);  
+                  @include rightPos(0.2s ease-in-out);
+                  border-left: 2px solid rgba(255,255,255,0.5);
+                }
+                &:hover,:active{
+                  @include color($greyUltraLight);
+
+                  .tag-bg{
+                    right: 0;
+                    @include rightPos(0.2s ease-in-out);                  
+                  }              
+                }
+              }
+            }
+            a{
+              .main-btn{
+              max-width: 100%; 
+              width: calc(100% - 48px);
+              margin: 0 24px 0 24px;
+              position: absolute;           
+              bottom: 24px;
+            }
+            }            
           }
         }
       }
@@ -65,54 +111,39 @@
 
     /*Desktop devices*/
     @media screen 
-      and (min-width: $tabletScreen){
+      and (min-width: $desktopScreen){
+        .main-item:nth-child(-n+4){ margin-top:0;} 
+        .main-item:nth-child(4n+1){ margin-left: 0;} 
+        .main-item:nth-child(4n+4){ margin-right: 0;}
+    }
 
-        .main-item:nth-child(-n+4){
-          margin-top:0;
-        } 
-
-        .main-item:nth-child(4n+1){
-          margin-left: 0;
-        } 
-
-        .main-item:nth-child(4n+4){
-          margin-right: 0;
-        }
+    /* Desktops and laptops ----------- */
+    @media only screen  
+      and (min-width : $laptopScreen)
+      and (max-width : $desktopScreen){
+        .main-item:nth-child(-n+3){margin-top:0;} 
+        .main-item:nth-child(3n+1){margin-left: 0;} 
+        .main-item:nth-child(3n+3){margin-right: 0;}
+        .main-item{width:calc(33.333% - 8px);}
     }
 
     /*Tablet devices*/
     @media screen 
       and (min-width: $phoneScreen)
-      and (max-width: $tabletScreen){
-
-        .main-item:nth-child(-n+2){
-          margin-top:0;
-        } 
-
-        .main-item:nth-child(2n+1){
-          margin-left: 0;
-        } 
-
-        .main-item:nth-child(2n+2){
-          margin-right: 0;
-        } 
+      and (max-width: $laptopScreen){
+        .main-item:nth-child(-n+2){margin-top:0;} 
+        .main-item:nth-child(2n+1){margin-left: 0;} 
+        .main-item:nth-child(2n+2){margin-right: 0;}
+        .main-item{width:calc(50% - 6px);}
     }
 
     /*Phone devices*/
     @media screen 
       and (max-width: $phoneScreen){
-
-        .main-item:first-child{
-          margin-top:0;
-        } 
-
-        .main-item{
-          margin-left: 0;
-        } 
-
-        .main-item{
-          margin-right: 0;
-        } 
+        .main-item:first-child{margin-top:0;} 
+        .main-item{margin-left: 0;} 
+        .main-item{margin-right: 0;}
+        .main-item{width: 100%;}
     }
   }
 }

@@ -1,15 +1,17 @@
 <div class="main-wrapper responsive-pad">
   <div class="main-content">
-    <div class="main-item" id="workato">
-      <div class="main-item-wrapper">
+    <div class="main-item" ng-repeat="item in list.items | filter:query" ng-style="{{item.bgColor}}">
+      <div class="main-item-wrapper" ng-style="{{item.style}}">
+        <div class="main-item-text" ng-style="item.mask === 'true' ? { 'background-color':'rgba(0,0,0,0.1)'} : { 'background-color':'rgba(255,255,255,0.2)'}">
+          <div class="main-item-text-content">
+            <div class="item-head">{{item.title}}</div>
+            <ul>
+              <li ng-repeat="tag in item.tags"><div class="tag-Bg"></div>{{tag}}</li>
+            </ul>
+            <a href="{{item.link}}"><div class="generic-btn main-btn">View Project</div></a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="main-item"></div>
-    <div class="main-item"></div>
-    <div class="main-item"></div>
-    <div class="main-item"></div>
-    <div class="main-item"></div>
-    <div class="main-item"></div>
   </div>
-  
 </div>
