@@ -6,7 +6,7 @@ app.controller('mainController', ['$scope', function($scope){
         "title" : "WORKATO",
         "tags" : ["UI/UX", "HTML5", "CSS3", "Javscript", "jQuery"],
         "mask" : "true",
-        "link": "https://www.support.workato.com",
+        "link": "https://support.workato.com/support/home",
         "style" : {"background-image" : "url(/images/item-workato.svg)",},     
         "bgColor" : {"background-color" : "rgba(39,152,159, 1)"}
       },

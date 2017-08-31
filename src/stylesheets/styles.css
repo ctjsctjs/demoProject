@@ -213,7 +213,7 @@ body {
   transition: left 0.1s ease-in-out;
 }
 /* line 33, ../sass/layout/_main.scss */
-.main-wrapper .main-content .main-item .main-item-wrapper:hover, .main-wrapper .main-content .main-item .main-item-wrapper :active {
+.main-wrapper .main-content .main-item .main-item-wrapper:hover, .main-wrapper .main-content .main-item .main-item-wrapper :focus {
   left: -50%;
   -webkit-transition: left 0.1s ease-in-out;
   -moz-transition: left 0.1s ease-in-out;
@@ -266,11 +266,11 @@ body {
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 /* line 80, ../sass/layout/_main.scss */
-.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li:hover, .main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li :active {
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li:hover, .main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li :focus {
   color: #FAFAFA;
 }
 /* line 83, ../sass/layout/_main.scss */
-.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li:hover .tag-bg, .main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li :active .tag-bg {
+.main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li:hover .tag-bg, .main-wrapper .main-content .main-item .main-item-wrapper .main-item-text .main-item-text-content ul li :focus .tag-bg {
   right: 0;
   -webkit-transition: right 0.2s ease-in-out;
   -moz-transition: right 0.2s ease-in-out;
